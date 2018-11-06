@@ -1,0 +1,12 @@
+<%= link_to 'Home', articles_path %>
+
+<div class="card-article-header">
+<h2><%= @article.title %></h2>
+</div>
+<div class="card-article-body">
+<p><%= @article.content %></p>
+</div>
+
+<%= link_to 'edit', edit_article_path(@article) %>
+<%= link_to 'delete', article_path, method: :delete,
+data: { confirm: 'Are you sure?'} %>
